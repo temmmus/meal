@@ -1,0 +1,120 @@
+@import "src/styles/variables";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  line-height: 2rem;
+  width: 100%;
+  background-color: $tertiary-background-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  z-index: 1000;
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__logo {
+    margin: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: $link-text-color;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      animation: colorChange 5s linear infinite forwards;
+    }
+
+    @keyframes colorChange {
+      0% {
+        color: $link-text-color;
+      }
+      25% {
+        color: #ff6347;
+      }
+      50% {
+        color: #32cd32;
+      }
+      75% {
+        color: #1e90ff;
+      }
+      100% {
+        color: $link-text-color;
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+  }
+
+  &__navigation-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__navigation-item {
+    margin-left: 1rem;
+  }
+
+  &__navigation-link {
+    text-decoration: none;
+    color: $primary-text-color;
+    border-bottom: 2px solid transparent;
+    transition: color 0.5s ease;
+
+    &.active {
+      color: $link-hover-text-color;
+      border-bottom: 2px solid $link-hover-text-color;
+      transition: border 0.5s ease;
+    }
+
+    &:hover {
+      color: $link-hover-text-color;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &__logo {
+      font-size: 1.5rem;
+    }
+    &__navigation-link {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__logo {
+      font-size: 1.2rem;
+    }
+
+    &__navigation-link {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    line-height: 1rem;
+
+    &__logo {
+      font-size: 1rem;
+    }
+
+    &__navigation-link {
+      font-size: 0.6rem;
+    }
+
+    &__navigation-item {
+      margin-left: 0;
+    }
+  }
+}

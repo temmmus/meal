@@ -1,0 +1,42 @@
+@import "src/styles/variables";
+
+.footer {
+  background-color: $tertiary-background-color;
+  padding: 1rem 2rem;
+  line-height: 2rem;
+  text-align: center;
+
+  &__copyright {
+    margin: 0;
+    text-align: right;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $link-text-color;
+
+    &:hover {
+      color: $link-hover-text-color;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &__copyright {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__copyright {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    line-height: 1rem;
+
+    &__copyright {
+      font-size: 0.6rem;
+    }
+  }
+}

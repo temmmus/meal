@@ -1,0 +1,55 @@
+@import "src/styles/variables";
+
+.alphabet {
+  text-align: left;
+  justify-self: start;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__navigation {
+    margin: 1rem 0;
+  }
+
+  &__navigation-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__navigation-link {
+    text-decoration: none;
+    color: $primary-text-color;
+    transition: color 0.5s ease;
+
+    &.active {
+      color: $link-hover-text-color;
+    }
+
+    &:hover {
+      color: $link-hover-text-color;
+      border-color: $link-hover-text-color;
+    }
+  }
+
+  &__navigation-item {
+    font-size: 1.5rem;
+    border: 1px solid $primary-text-color;
+    border-radius: $border-radius;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+
+    &:hover .alphabet__navigation-link {
+      color: $link-hover-text-color;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "src/styles/variables";
+
+.not-found {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__message {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+}

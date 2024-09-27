@@ -1,0 +1,26 @@
+@import "/src/styles/variables";
+
+.go-back-button {
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+  border-radius: $border-radius;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: $tertiary-background-color;
+  cursor: pointer;
+  transition: color 0.5s, border-color 0.5s;
+
+  &:hover {
+    color: $link-hover-text-color;
+    border-color: $link-hover-text-color;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}

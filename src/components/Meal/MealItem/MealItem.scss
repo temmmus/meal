@@ -1,0 +1,80 @@
+@import "src/styles/variables";
+
+.meal__card {
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary-background-color;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  animation: meal-cards-appear 0.5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+
+  @keyframes meal-cards-appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  &-image-container {
+    position: relative;
+    display: inline-block;
+
+    &:hover .meal__card-link {
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: $border-radius $border-radius 0 0;
+    }
+  }
+
+  &-image {
+    display: block;
+    width: 100%;
+    border-radius: $border-radius $border-radius 0 0;
+    object-fit: scale-down;
+  }
+
+  &-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: $link-text-color;
+    white-space: nowrap;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.5s;
+    z-index: 1;
+
+    &:hover {
+      color: $link-hover-text-color;
+    }
+  }
+
+  &-title {
+    margin: 0;
+    font-size: 1rem;
+    padding: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: default;
+  }
+}

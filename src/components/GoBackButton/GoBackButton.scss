@@ -5,11 +5,11 @@
   height: 50px;
   margin: 0 auto;
   padding: 0.5em 1em;
-  border-radius: $border-radius;
-  border: 1px solid transparent;
   font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
+  border-radius: $border-radius;
+  border: 2px solid transparent;
   background-color: $tertiary-background-color;
   cursor: pointer;
   transition: color 0.5s, border-color 0.5s;

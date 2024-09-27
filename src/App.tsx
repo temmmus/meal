@@ -3,7 +3,7 @@ import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
-import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton";
 
 import CategoriesPage from "./pages/CategoriesPage";
 import CategoryPage from "./pages/CategoryPage";
@@ -26,7 +26,7 @@ function App() {
         </Routes>
       </Main>
       <Footer />
-      <ScrollToTop />
+      <ScrollToTopButton />
     </Router>
   );
 }

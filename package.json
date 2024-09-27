@@ -2,7 +2,7 @@
   "name": "meal",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://temmmus.github.io/meal",
+  "homepage": "https://temmmus.github.io/meal/",
   "type": "module",
   "scripts": {
     "dev": "vite",

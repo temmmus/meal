@@ -4,8 +4,8 @@ This is a recipe application that allows users to explore a variety of recipes s
 
 ## Features
 
-- Recipe Search: Search recipes by meal name, category, region, or ingredients.
-- Detailed Recipe Information: View comprehensive details for each recipe, including ingredients, measurements, and step-by-step cooking instructions.
+- Recipe Search: Search recipes by meal name, category, or region.
+- Detailed Recipe Information: View comprehensive details for each recipe, including ingredients, measurements, and cooking instructions.
 - Meal Categories: Browse meals by categories such as Seafood, Chicken, Vegetarian, and more.
 - Regional Cuisine: Explore international recipes from different regions like Italian, Chinese, Mexican, etc.
 - YouTube Integration: Watch embedded YouTube tutorial videos for many recipes to follow along.
